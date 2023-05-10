@@ -1,0 +1,698 @@
+@charset "utf-8";
+body,header,main,footer,div,nav,ul,li,h1,h2,h3,a,p,figure,figcaption {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+body {
+    font-family: Montserrat, Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+header{
+    background-color: transparent;
+    position: fixed;
+    padding: 0 30px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 86px;
+    align-items: center;
+    z-index: 3;
+    transition: 0.5s;
+}
+
+header .spnav{
+    display: none;
+}
+
+header .spbtn{
+    position: relative;
+    display: none;
+    width: 44px;
+    height: 44px;
+}
+.spbtn span{
+    position: absolute;
+    left: 10%;
+    display: block;
+    background-color: #fff;
+    width: 80%;
+    height: 2px;
+}
+.spbtn .btn1{
+    top: 30%;
+}
+.spbtn .btn2{
+    top: 50%;
+}
+.spbtn .btn3{
+    top: 70%;
+}
+.anime{
+    background-color: #21054D;
+    height:64px;
+    transition: 0.5s;
+}
+
+header ul li {
+    margin-left: 25px;
+    letter-spacing: 0.4px;
+}
+
+header ul li a {
+    display: block;
+    height: 20px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+}
+
+header ul li a::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+}
+
+header ul li a:hover::before {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.visual {
+    height: 100vh;
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin-bottom: 70.5px;
+}
+.visual .scroll{
+    position: relative;
+    z-index: 1;
+    top: 41%;
+    left: 93.5%;
+    margin: 0;
+    width: 90px;
+    transform: rotate(90deg);
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+p.scroll::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 38%;
+    left: 60%;
+    animation: navi 1.8s linear 0s infinite normal backwards;
+}
+@keyframes navi{
+    0%{
+        width: 1px;
+        transform: translateX(0px);
+    }
+    60%{
+        width: 100px;
+        transform: translateX(0px);
+    }
+    80%{
+        width: 100px;
+        transform: translateX(0px);
+    }
+    100%{
+        width: 100px;
+        transform: translateX(100px);
+    }
+}
+.mainhead {
+    position: relative;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.mainhead h1 {
+    font-size: 72px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.mainhead .website {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 47px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    text-align: initial;
+}
+
+.mainhead .website p {
+    width: 225px;
+    font-size: 24px;
+}
+
+.mainhead a {
+    width: 220px;
+    height: 55px;
+    display: block;
+    margin: auto;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    font-weight: bold;
+    line-height: 3.6;
+    font-size: 15px;
+    position: relative;
+}
+
+.mainhead a:hover {
+    opacity: 0.8;
+}
+
+.mainhead a:hover:after {
+    transform: rotate(90deg) translateY(-30px);
+    top: 15px;
+}
+
+.mainhead a::after {
+    content: "▲";
+    transform: rotate(90deg) translateY(-25px);
+    transition: 0.3s;
+    position: absolute;
+    right: 1.5rem;
+    font-size: 20px;
+    height: 25px;
+    width: 25px;
+    top: 27%;
+}
+
+article .heading,section .heading {
+    width: 120px;
+    margin-right: 50px;
+    padding-bottom: 26px;
+}
+
+.heading h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #391E88;
+}
+
+.heading h2 span {
+    font-size: 13px;
+    font-family: 'Hiragino';
+    display: block;
+}
+
+main article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main article ul .news {
+    font-size: 15px;
+    height: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.news p span {
+    display: block;
+    width: 82px;
+    height: 22px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #E8E8E8;
+    margin: 0 20px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 2;
+}
+
+.news a {
+    color: #000;
+    position: relative;
+    text-align: left;
+}
+
+.news a::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1.2px;
+    position: absolute;
+    left: 0;
+    top: 80%;
+    background-color: #000;
+}
+
+.news a:hover::before {
+    width: 100%;
+    transition: 0.5s;
+}
+
+section .heading {
+    width: auto;
+    text-align: center;
+    margin: auto;
+}
+
+main .service,main article {
+    margin-bottom: 140px;
+}
+
+section .job {
+    justify-content: space-evenly;
+    margin-bottom: 28px;
+}
+
+.job figure {
+    width: 350px;
+    text-align: center;
+}
+
+.job figure p {
+    text-align: left;
+}
+
+.job figure h3 {
+    margin: 22px auto 17px auto;
+    font-weight: bold;
+}
+
+section .btn {
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    box-sizing: border-box;
+    padding-top: 18px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 200px;
+    height: 54px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #7633a4 0%, #250d65 51%, #7633a4 100%);
+    background-size: 200%;
+    transition: 0.5s;
+}
+
+a.btn::after {
+    content: "▲";
+    transition: 0.5s;
+    transform: rotate(90deg) translateY(-40px);
+    position: absolute;
+}
+a.btn:hover::after {
+    transition: 0.5s;
+    transform: rotate(90deg) translateY(-55px);
+}
+section .btn:hover {
+    background-position: right center;
+    transition: 0.5s;
+}
+
+main .site {
+    margin-bottom: 40px;
+    height: 651px;
+}
+
+.site .slide {
+    width: 100%;
+}
+
+.site .slide ul {
+    position: relative;
+    z-index: 2;
+    top: 10%;
+}
+
+.site .slide ul li {
+    position: absolute;
+    top: 0;
+    left: 15px;
+}
+.slide ul li img{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.site .slide ul li{
+    display: none;
+}
+.slide ul li:first-of-type{
+    display: block;
+}
+.toggle {
+    position: relative;
+    top: 45%;
+    left: 15px;
+    width: 750px;
+    z-index: 2;
+}
+.toggle button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    transform: rotate(45deg);
+    background-color: transparent;
+}
+.toggle .right:hover{
+    border-right: 3px solid #666;
+    border-top: 3px solid #666;
+}
+.toggle .left:hover{
+    border-left: 3px solid #666;
+    border-bottom: 3px solid #666;
+}
+.toggle .right{
+    border-right: 3px solid #000;
+    border-top: 3px solid #000;
+}
+.toggle .left{
+    border-left: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+.slidenum {
+    position: relative;
+    top: 90%;
+    left: -11%;
+    justify-content: flex-end;
+    z-index: 2;
+}
+
+.slidenum span {
+    margin-left: 8px;
+    border-radius: 30px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #C0C0C0;
+}
+
+.slidenum .active {
+    background-color: #391E88;
+}
+
+.site .works {
+    width: 600px;
+    height: 219px;
+    position: relative;
+    z-index: 1;
+}
+
+.site .works::after {
+    content: "";
+    display: block;
+    width: 837px;
+    height: 651px;
+    position: absolute;
+    top: -80%;
+    left: -109%;
+    z-index: -1;
+    background-color: #F0F0F0;
+}
+
+.works .text {
+    margin: 28px auto 25px auto;
+}
+
+.works .text p,section .com h3,.job figure p {
+    font-family: 'Hiragino Sans';
+}
+
+section .com .copy {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 41px;
+    font-size: 40px;
+    text-decoration: underline 12px #F5F534;
+    text-underline-offset: -2px;
+}
+.copy br{
+    display: none;
+}
+
+section .com {
+    background-image: url(../img/グループ\ 81.png), url(../img/bg-circle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.com div {
+    margin-bottom: 56px;
+}
+main .content{
+    justify-content: center;
+    margin-bottom: 110px;
+}
+
+section .rec{
+    margin: 0;
+    padding-top: 70px;
+    width: 445px;
+    background-color: #F7F7F7;
+}
+section .rec p{
+    margin: 28px 0 30px;
+}
+
+section .RECRUIT{
+    background-image: url(../img/you-x-ventures-X8H8vPcelPk-unsplash.jpg);
+    background-repeat: no-repeat;
+    width: 665px;
+    height: 332px;
+}
+
+main .contact{
+    background-color: #F7F7F7;
+    height: 356px;
+    padding-top: 80px;
+    box-sizing: border-box;
+}
+
+.contact .heading h2{
+    margin-bottom:30px;
+}
+
+.contact .heading p{
+    margin-bottom: 28px;
+}
+
+footer{
+    background-color: #120E19;
+    height: 173px;
+}
+
+footer ul.flex{
+    justify-content: center;
+}
+footer ul li{
+    margin: 60px 20px 22px;
+}
+footer ul li a{
+    color: #fff;
+    font-size: 14px;
+    transition: 0.5s;
+}
+footer ul li a:hover{
+    transition: 0.5s;
+    opacity: 0.8;
+}
+
+footer p{
+    color: #A798B7;
+    font-size: 10px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.nav{
+    background-color: #FFFFFF;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 85%;
+    left: 92%;
+    border-radius: 30px;
+    z-index: 1;
+}
+.nav a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.nav a::before{
+    display: block;
+    content: "↑";
+    font-size: 35px;
+    position: absolute;
+    top: 0;
+    left: 14px;
+}
+
+@media screen and (max-width: 540px) {
+    header{
+        width: 100%;
+        height: 64px;
+    }
+    header ul li{
+        margin: 0;
+    }
+    header .pcnav,.toggle{
+        display: none;
+    }
+    header .acbtn span,header .spbtn span{
+        transition: 0.5s;
+    }
+    header .acbtn .btn1{
+        transform: rotate(45deg)translate(6px, 6px);
+    }
+    header .acbtn .btn2{
+        display: none;
+    }
+    header .acbtn .btn3{
+        transform: rotate(135deg)translate(-6px, 6px);
+    }
+    .spnav,.mainhead .website,.copy br,header .spbtn{
+        display: block;
+    }
+    header .spnav,header .spnav ul{
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    header .spnav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(0deg,#250d65 0%,#7633a4 100%);
+    }
+    header .spnav ul{
+        padding: 0px 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .spnav ul li{
+        margin-bottom: 10px;
+    }
+    .mainhead{
+        padding-left: 40px;
+        box-sizing: border-box;
+        text-align: left;
+    }
+    .mainhead h1{
+        font-size: 40px;
+    }
+    .mainhead a{
+        padding-left: 45px;
+        box-sizing: border-box;
+        margin: 0 auto 0 0;
+    }
+    .visual{
+        height:80vh;
+        margin-bottom: 40px;
+    }
+    .visual .scroll{
+        left: 100%;
+        transform: rotate(90deg) translateY(70px) translateX(20px);
+    }
+    li.news.flex {
+        flex-flow: wrap;
+        margin-bottom: 40px;
+        padding: 0 25px;
+    }
+    main .site,main article,section .job{
+        display: block;
+        text-align: center;
+    }
+    article .heading,figure{
+        margin: auto;
+    }
+    main .service{
+        margin-bottom: 40px;
+    }
+    .slidenum{
+        top: 300px;
+        left: -20px;
+        transform: translateY(90px);
+    }
+    .site .slide ul li{
+        left: 0;
+    }
+    .site .works{
+        left: 0;
+        padding: 0 5%;
+        width: auto;
+        top: 70%;
+    }
+    .site .works::after{
+        width: 100%;
+        left: 0;
+        height: 424px;
+    }
+    section .com{
+        background-image:url(../img/bg-circle.png);
+        background-size: 100%;
+        padding-top: 60px;
+    }
+    main .content{
+        width: auto;
+        flex-direction: column-reverse;
+        margin-bottom: 40px;
+    }
+    section .rec{
+        width: 100%;
+    }
+    section .RECRUIT{
+        height: 200px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+    footer{
+        height: auto;
+    }
+    footer ul.flex{
+        padding: 40px 20px 0;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    footer ul li{
+        margin: 20px 10px 0px;
+    }
+    footer p{
+        padding:30px 0 60px;
+        margin-bottom: 0;
+    }
+    .nav{
+        left: 95%;
+        transform: translateX(-95%);
+    }
+}
